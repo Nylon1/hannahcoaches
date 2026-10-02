@@ -62,6 +62,12 @@ The Google link searches Maps for Hannah Coaches UK Ltd in Nelson, Lancashire. A
 
 Upload the contents of `dist/` to any static host. All pages are pre-rendered HTML with unique titles, descriptions and shared LocalBusiness structured data. No client-side routing fallback is needed.
 
+### Vercel
+
+The `hannahcoaches` project in Hamza's projects is connected to `Nylon1/hannahcoaches`. Pushes to `main` deploy to production. `vercel.json` sets the build command to `npm run build`, the output directory to `dist`, and trailing slashes for directory routes. The site does not need environment variables; leave `BASE_PATH` unset for the Vercel domain. Local `.vercel/` settings and `.env` files must stay out of Git.
+
+### GitHub Pages (alternative)
+
 For GitHub Pages, a manual workflow is included in `.github/workflows/deploy.yml`:
 
 1. In repository **Settings → Pages**, select **GitHub Actions** as the build source.
