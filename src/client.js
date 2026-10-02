@@ -18,7 +18,7 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('click', (event) => {
   if (!event.target.closest('.header-inner')) closeMenu();
 });
-matchMedia('(min-width: 1101px)').addEventListener('change', closeMenu);
+matchMedia('(min-width: 1241px)').addEventListener('change', closeMenu);
 
 const form = document.querySelector('#quote-form');
 if (form) {
@@ -73,7 +73,7 @@ if (form) {
 // Motion is progressive enhancement: all content is visible without JavaScript.
 const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
 document.documentElement.classList.add('js-ready');
-const revealTargets = document.querySelectorAll('.section-heading, .service-card, .fleet-card, .trip-card, .step, .welcome-grid, .split-section, .about-grid, .manager-card, .feature-grid article, .explorer-panel, .fleet-finder, .access-grid, .access-planner, .review-strip .container, .cta-inner, .contact-details, .enquiry-card');
+const revealTargets = document.querySelectorAll('.section-heading, .service-card, .fleet-card, .trip-card, .step, .welcome-grid, .split-section, .about-grid, .manager-card, .feature-grid article, .explorer-panel, .fleet-finder, .access-grid, .access-planner, .review-strip .container, .cta-inner, .contact-details, .enquiry-card, .stay-panel, .stay-separate');
 let revealObserver;
 if ('IntersectionObserver' in window && !motionPreference.matches) {
   revealObserver = new IntersectionObserver(entries => {

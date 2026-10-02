@@ -1,6 +1,6 @@
 # Hannah Coaches UK
 
-A responsive seven-page website for Hannah Coaches UK, with a royal blue executive identity, accessible navigation and a client-side email enquiry builder.
+A responsive eight-page website for Hannah Coaches UK, with a royal blue executive identity, accessible navigation and a client-side email enquiry builder.
 
 ## Run locally
 
@@ -27,8 +27,9 @@ npm run preview
 3. School & Accessible Transport `/school-transport/`
 4. Airport Transfers `/airport-transfers/`
 5. Trips & Events `/trips-events/`
-6. About Us `/about/`
-7. Contact & Enquiries `/contact/`
+6. Stays & Travel `/stays-travel/`
+7. About Us `/about/`
+8. Contact & Enquiries `/contact/`
 
 Edit copy and shared page structure in `src/site.mjs`, design in `src/styles.css` and browser interactions in `src/client.js`.
 
@@ -38,7 +39,7 @@ Scroll reveals use IntersectionObserver and run once per element. All ordinary c
 
 ## Group organiser trip companion
 
-Open `/trips-events/#trip-tool`. This keeps the requested seven-page structure. Home, footer and quick-planner links also lead to it.
+Open `/trips-events/#trip-tool`. Home, footer and quick-planner links also lead to it.
 
 - Personalised checklists for airport, school, golf, football, wedding, weekend and other journeys, with additional tasks for accessibility, children, equipment and overnight stays.
 - Confirmed passenger count, luggage count, capacity guidance, incomplete key arrangements, custom reminders with remove/undo, and checklist filters.
@@ -49,6 +50,14 @@ Open `/trips-events/#trip-tool`. This keeps the requested seven-page structure. 
 - Transport enquiry prefill carrying destination, date, pickup, group size and practical requirements into the contact form. This still does not confirm a booking.
 
 Template: `src/trip-tool.mjs`. Browser behaviour: `src/trip-tool.js`. Pure calculations: `src/trip-engine.js`. Styling: `src/trip-tool.css`. Tests cover midnight/month/leap-year boundaries, incomplete dates, penny-preserving costs, adaptive checklist progress and malformed saved data.
+
+## Stays & Travel
+
+Open `/stays-travel/` to build an accommodation and transport plan. Booking.com and Airbnb links pass destination and optional dates to independent searches in new tabs. Guests, children, rooms, access needs and accommodation payments are handled on the provider. Coach passenger counts are not passed as accommodation guest counts. No accommodation API, inventory, affiliate relationship or automatic booking import is implied.
+
+The form validates paired dates and check-out order, provides group capacity guidance, and carries pickup, the full passenger count, dates, property/address and access discussion into the existing transport enquiry. Check-in and check-out provide initial outward and return dates for the organiser to review. Flexible dates and unchosen properties are supported. Nothing is booked or sent automatically.
+
+Template: `src/stays.mjs`. Behaviour: `src/stays.js`. Pure date and URL helpers: `src/stays-engine.js`. Styling: `src/stays.css`.
 
 ## Enquiries
 

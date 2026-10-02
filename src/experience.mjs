@@ -7,6 +7,7 @@ export function heroVisual(label, base) {
     'SCHOOL & ACCESSIBLE TRANSPORT': ['lake-district.jpg', 'Care, every mile.', 'EVERYBODY WELCOME', 'Green countryside beside a winding road'],
     'AIRPORT TRANSFERS': ['airport.jpg', 'Your holiday starts here.', 'TOGETHER, FROM THE START', 'An aeroplane wing above the clouds'],
     'TRIPS & EVENTS': ['wedding.jpg', 'Make a day of it.', 'MOMENTS WORTH SHARING', 'A wedding couple holding a bouquet in warm sunlight'],
+    'STAYS & TRAVEL': ['lake-district.jpg', 'Stay somewhere memorable.', 'YOUR STAY. OUR JOURNEY.', 'Green hills and a scenic road through the Lake District'],
     'ABOUT HANNAH COACHES UK': ['country-road.jpg', 'A journey that began in 2010.', 'LANCASHIRE ROOTS', 'An open road through countryside'],
     'CONTACT & ENQUIRIES': ['lake-district.jpg', 'Something to look forward to.', 'LET’S GET YOU THERE', 'A scenic road through the Lake District'],
   };
