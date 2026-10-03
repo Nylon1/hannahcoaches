@@ -11,7 +11,7 @@ export async function build() {
   await cp(resolve(root, 'assets'), resolve(root, 'dist/assets'), { recursive: true });
   await cp(resolve(root, 'src/styles.css'), resolve(root, 'dist/assets/styles.css'));
   await cp(resolve(root, 'src/client.js'), resolve(root, 'dist/assets/client.js'));
-  for (const file of ['trip-tool.js', 'trip-engine.js', 'trip-tool.css', 'stays.js', 'stays-engine.js', 'stays.css']) {
+  for (const file of ['trip-tool.js', 'trip-engine.js', 'trip-tool.css', 'stays.js', 'stays-engine.js', 'stays.css', 'airports.js', 'flights-engine.js', 'flights.js', 'flights.css']) {
     await cp(resolve(root, 'src', file), resolve(root, 'dist/assets', file));
   }
   for (const page of pages) {

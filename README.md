@@ -1,6 +1,6 @@
 # Hannah Coaches UK
 
-A responsive eight-page website for Hannah Coaches UK, with a royal blue executive identity, accessible navigation and a client-side email enquiry builder.
+A responsive nine-page website for Hannah Coaches UK, with a royal blue executive identity, accessible navigation and a client-side email enquiry builder.
 
 ## Run locally
 
@@ -28,8 +28,9 @@ npm run preview
 4. Airport Transfers `/airport-transfers/`
 5. Trips & Events `/trips-events/`
 6. Stays & Travel `/stays-travel/`
-7. About Us `/about/`
-8. Contact & Enquiries `/contact/`
+7. Flight Checker `/flight-checker/`
+8. About Us `/about/`
+9. Contact & Enquiries `/contact/`
 
 Edit copy and shared page structure in `src/site.mjs`, design in `src/styles.css` and browser interactions in `src/client.js`.
 
@@ -58,6 +59,14 @@ Open `/stays-travel/` to build an accommodation and transport plan. Booking.com 
 The form validates paired dates and check-out order, provides group capacity guidance, and carries pickup, the full passenger count, dates, property/address and access discussion into the existing transport enquiry. Check-in and check-out provide initial outward and return dates for the organiser to review. Flexible dates and unchosen properties are supported. Nothing is booked or sent automatically.
 
 Template: `src/stays.mjs`. Behaviour: `src/stays.js`. Pure date and URL helpers: `src/stays-engine.js`. Styling: `src/stays.css`.
+
+## Flight checker
+
+Open `/flight-checker/`. The page links to official arrivals/departures boards for 29 airports across England, Scotland, Wales and Northern Ireland. It includes airport name/code search, region filters, arrival/departure selection and flight-number copying. Flight information opens on airport websites; the site does not fetch, cache, display or monitor live flight statuses and never invents flight data. Combined boards require selecting the corresponding tab on the airport site. Humberside links to its official homepage for flight information. Some airport sites block automated requests; their official navigation/help links were used where available.
+
+The transfer handoff maps arriving flights to an airport pickup, and departing flights to an airport destination. The enquiry carries the full passenger count, luggage, accessibility request, terminal and flight details. Flight date/time are separate from the requested transfer date, preserving overnight journeys. Collection times and all routes must be agreed with Hannah Coaches. No automatic delay monitoring or booking changes are promised. No API key or paid service is required.
+
+Official source directory: `src/airports.js` (reviewed 3 October 2026). Template: `src/flights.mjs`. UI: `src/flights.js`. Enquiry mapping: `src/flights-engine.js`. Tests cover direction, overnight transfer dates, malformed dates, all four UK nations and filtering.
 
 ## Enquiries
 

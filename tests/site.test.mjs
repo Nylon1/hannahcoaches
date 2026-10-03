@@ -4,8 +4,8 @@ import { existsSync } from 'node:fs';
 import { pages, renderPage } from '../src/site.mjs';
 
 for (const base of ['/', '/hannahcoaches/']) {
-  test(`All eight pages, navigation, local assets and fragments resolve at ${base}`, () => {
-    assert.equal(pages.length, 8);
+  test(`All nine pages, navigation, local assets and fragments resolve at ${base}`, () => {
+    assert.equal(pages.length, 9);
     const documents = new Map(pages.map(page => [base + page.slug + (page.slug ? '/' : ''), renderPage(page, base)]));
     for (const [path, html] of documents) {
       assert.equal((html.match(/<h1>/g) || []).length, 1, path);
